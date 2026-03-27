@@ -2,22 +2,26 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Code') {
+        stage('Clone Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/AaliyaShaikh23/student-registrationapp.git'
+                git 'https://github.com/AaliyaShaikh23/student-registrationapp.git'
             }
         }
 
-        stage('Install Dependencies') {
+        stage('Install Requirements') {
             steps {
-                bat 'pip install -r requirements.txt'
+                bat 'python -m pip install -r requirements.txt'
             }
         }
 
-        stage('Verify App File') {
+        stage('Verify Flask File') {
             steps {
                 bat 'python -c "import app; print(\'Flask app verified successfully\')"'
             }
         }
     }
 }
+
+
+
+
