@@ -1,6 +1,6 @@
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
-    "password": "root123",
+    "password": "your_mysql_password",
     "database": "studentdb"
 }
