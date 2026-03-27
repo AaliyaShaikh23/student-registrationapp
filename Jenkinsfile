@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Code') {
+        stage('Checkout Code') {
             steps {
                 git 'https://github.com/AaliyaShaikh23/student-registrationapp.git'
             }
@@ -21,7 +21,3 @@ pipeline {
         }
     }
 }
-
-
-
-
